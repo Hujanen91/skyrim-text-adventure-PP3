@@ -9,8 +9,15 @@ def prompt():
     print(
         "Welcome to a funny word adventure game that will take place in Whiterun in the world of Skyrim"
         )
-
-    input("Press 'enter' to continue ...")
-
+    
+    print("Hello Adventurer, what is your name?")
+    player = input()
+    print("Welcome\t" + player+"! Are your ready to begin?\n")
+    input("Press Enter to begin ...")
 
 prompt()
+
+def clear():
+    """
+    Clear out the welcome message and start the game when the user presses enter.
+    """
