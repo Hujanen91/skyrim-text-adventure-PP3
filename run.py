@@ -77,7 +77,7 @@ def scenarioTwo():
         print(
             "You strum a catchy tune dedicated to the town's chickens.\n" 
             "The fowl flock to you, forming a feathery entourage inside the small tavern.\n"
-            "You gain the title 'Clucker's Maestro.'"
+            "You gain the title 'Chicken chaser' and the chickens follow you as you leave Whiterun to search for your next adventure."
         )
         
     elif userInput == "2":
@@ -86,14 +86,15 @@ def scenarioTwo():
             "You attempt to play the lute with the power of the Fus Ro Dah shout.\n"
             "The result is a magical musical explosion lifting the roof of the tavern and attracts a wandering bard.\n"
             "Impressed, the bard becomes your traveling companion, singing tales of your comedic prowess.\n"
-            "'Toss a coin to your witcher'... oops, wrong universe."
+            "'Toss a coin to your witcher'... oops, wrong universe.\n"
+            "You and your new companion walk out the gates of Whiterun to look for a new quests to conquer."
         )
     input("Press enter to continue ...")
 
 def scenarioThree():
     #clear()
 
-    print("Scenario 2: The Enchanted Lute\n")
+    print("Scenario 3: The Jolly Mammoth Ride\n")
     print("After that weird encounter with the peculiar alchemist you turn around a corner and stumble upon a magical lute. What do you do?\n")
     print("Option 1: Play the Chicken Serenade?\nOption 2: Fus Ro Jam?\n")
     
@@ -108,7 +109,7 @@ def scenarioThree():
         print(
             "You strum a catchy tune dedicated to the town's chickens.\n" 
             "The fowl flock to you, forming a feathery entourage inside the small tavern.\n"
-            "You gain the title 'Clucker's Maestro.'"
+            "You gain the title 'Chicken chaser' and the chickens follow you as you leave Whiterun to search for your next adventure."
         )
         
     elif userInput == "2":
@@ -117,7 +118,8 @@ def scenarioThree():
             "You attempt to play the lute with the power of the Fus Ro Dah shout.\n"
             "The result is a magical musical explosion lifting the roof of the tavern and attracts a wandering bard.\n"
             "Impressed, the bard becomes your traveling companion, singing tales of your comedic prowess.\n"
-            "'Toss a coin to your witcher'... oops, wrong universe."
+            "'Toss a coin to your Witcher'... oops, wrong universe.\n"
+            "You and your new companion walk out the gates to Whiterun to look for a new quests to conquer"
         )
     input("Press enter to continue ...")
     
