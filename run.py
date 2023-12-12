@@ -19,12 +19,17 @@ def prompt():
     input("Press Enter to begin ...")
 
 
+def clear():
+    """
+    Clear out the welcome message and start the game when the user presses enter.
+    """
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 prompt()
-
+clear()
 
 while True:
-    
+    clear()
 
     print("Scenario 1: The Peculiar Potion Peddler\n")
     print("While walking around in the town of Whiterun you encounter a peculiar alchemist selling bizarre potions. What do you do?\n")
