@@ -89,7 +89,6 @@ def scenarioTwo():
             "'Toss a coin to your witcher'... oops, wrong universe."
         )
     input("Press enter to continue ...")
-    clear()
 
     
         
