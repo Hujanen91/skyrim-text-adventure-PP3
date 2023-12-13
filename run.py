@@ -1,22 +1,23 @@
 import os
 import sys
-# import pyfiglet module
 import pyfiglet
 
 
 result = pyfiglet.figlet_format("Skyrim Word Adventure Game", font="digital")
 print(result+"A project created for code institute by Jennifer Hujanen\n\n")
-
+input("Press Enter to begin ...")
 
 def prompt():
     """Display starting game message"""
-    print("Welcome to a funny word adventure game that will"
-          "take place in Whiterun in the world of Skyrim")
-
     print("Hello Adventurer, what is your name?")
     player = input()
-    print("\nWelcome\t" + player+"! Are your ready?\n")
-    input("Press Enter to begin ...")
+    print("\nWelcome " + player + ", our brave adventurer, to the land of Tamriel,\n" 
+          "where dragons soar and sweetrolls are a cherished treasure.\n" 
+          "As the chosen Dovakhiin, your quest is not to save the world\n" 
+          "but to embark on a series of hilarious misadventures.\n")
+    
+    print(player + "! Are your ready?\n")
+    input("Press Enter to continue ...")
 
 
 def clear():
@@ -34,8 +35,10 @@ clear()
 def scenarioOne():
 
     print("Scenario 1: The Peculiar Potion Peddler\n")
-    print("While walking around in the town of Whiterun you encounter a peculiar alchemist selling bizarre potions. What do you do?\n")
-    print("Option 1: Chug the Chuckle Elixir?\nOption 2: Negotiate for a Guffaw Grenade?\n")
+    print("While walking around in the town of Whiterun you encounter\n" 
+          "a peculiar alchemist selling bizarre potions. What do you do?\n")
+    print("Option 1: Chug the Chuckle Elixir?\n"
+          "Option 2: Negotiate for a Guffaw Grenade?\n")
 
     userInput = input("Enter 1 or 2: ")
 
@@ -48,9 +51,9 @@ def scenarioOne():
         print("You entered option 1!\n"
               "Chug the Chuckle Elixir!")
         print(
-            "You drink a potion labeled 'Chuckletonic', 
+            "You drink a potion labeled 'Chuckletonic',\n"
             "and suddenly everything becomes hilariously distorted.\n"
-            "NPCs start telling punchlines, 
+            "NPCs start telling punchlines,\n"
             "and you navigate the town with uncontrollable giggles.\n"
             "Hungry from all the laughter you head towards the tavern."
         )
@@ -59,7 +62,9 @@ def scenarioOne():
         print("You entered option 2!\n")
         print(
             "You haggle with the alchemist for a laughter-inducing explosive.\n"
-            "You accidentally toss it into a group of guards, who burst into fits of laughter, allowing you to sneak into the local tavern unnoticed."
+            "You accidentally toss it into a group of guards,\n"
+            "who burst into fits of laughter,\n" 
+            "allowing you to sneak into the local tavern unnoticed."
         )
     input("Press enter to continue ...")
     clear()
@@ -68,8 +73,10 @@ def scenarioOne():
 def scenarioTwo():
 
     print("Scenario 2: The Enchanted Lute\n")
-    print("After that weird encounter with the peculiar alchemist you turn around a corner and stumble upon a magical lute. What do you do?\n")
-    print("Option 1: Play the Chicken Serenade?\nOption 2: Fus Ro Jam?\n")
+    print("After that weird encounter with the peculiar alchemist\n"
+          "you turn around a corner and stumble upon a magical lute. What do you do?\n")
+    print("Option 1: Play the Chicken Serenade?\n"
+          "Option 2: Fus Ro Jam?\n")
 
     userInput = input("Enter 1 or 2: ")
 
@@ -82,18 +89,23 @@ def scenarioTwo():
         print("You entered option 1!\n")
         print(
             "You strum a catchy tune dedicated to the town's chickens.\n"
-            "The fowl flock to you, forming a feathery entourage inside the small tavern.\n"
-            "You gain the title 'Chicken chaser' and the chickens follow you as you leave Whiterun to search for your next adventure."
+            "The fowl flock to you,\n" 
+            "forming a feathery entourage inside the small tavern.\n"
+            "You gain the title 'Chicken chaser' and the chickens follow you\n"
+            "as you leave Whiterun to search for your next adventure."
         )
 
     elif userInput == "2":
         print("You entered option 2!\n")
         print(
             "You attempt to play the lute with the power of the Fus Ro Dah shout.\n"
-            "The result is a magical musical explosion lifting the roof of the tavern and attracts a wandering bard.\n"
-            "Impressed, the bard becomes your traveling companion, singing tales of your comedic prowess.\n"
+            "The result is a magical musical explosion lifting\n"
+            "the roof of the tavern and attracts a wandering bard.\n"
+            "Impressed, the bard becomes your traveling companion,\n"
+            "singing tales of your comedic prowess.\n"
             "'Toss a coin to your witcher'... oops, wrong universe.\n"
-            "You and your new companion walk out the gates of Whiterun to look for a new quests to conquer."
+            "You and your new companion walk out the gates of Whiterun\n"
+            "to look for a new quests to conquer."
         )
     input("Press enter to continue ...")
     clear()
@@ -102,8 +114,11 @@ def scenarioTwo():
 def scenarioThree():
 
     print("Scenario 3: The Jolly Mammoth Ride\n")
-    print("After walking for a bit out in the plains of Whiterun, you spot what looks like a friendly giant herding mammoths. How do you approach this opportunity?\n")
-    print("Option 1: Join the Mammoth Parade?\nOption 2: Attempt a Mammoth Backflip?\n")
+    print("After walking for a bit out in the plains of Whiterun,\n"
+          "you spot what looks like a friendly giant herding mammoths.\n"
+          "How do you approach this opportunity?\n")
+    print("Option 1: Join the Mammoth Parade?\n"
+          "Option 2: Attempt a Mammoth Backflip?\n")
 
     userInput = input("Enter 1 or 2: ")
 
@@ -114,8 +129,11 @@ def scenarioThree():
 
     if userInput == "1":
         print("You entered option 1!\n")
-        print("You march alongside the giants, leading a mammoth parade through the plains and everyone's having a jolly good time.\n"
-              "Or so you think until you're surprised attacked by the giant swinging his club making you fly like the dragon you are inside.\n")
+        print("You march alongside the giants, leading a mammoth parade through the plains\n"
+              "and everyone's having a jolly good time.\n"
+              "Or so you think until you're surprised attacked by the giant\n"
+              "swinging his club making you fly like the dragon you are inside.\n")
+
         print("Too bad Dovakhiin isn't invicible, you flew straight to oblivion!\n")
         restart = input("Press enter to restart the game ...")
 
@@ -127,11 +145,9 @@ def scenarioThree():
     elif userInput == "2":
         print("You entered option 2!\n")
         print(
-            "You attempt to play the lute with the power of the Fus Ro Dah shout.\n"
-            "The result is a magical musical explosion lifting the roof of the tavern and attracts a wandering bard.\n"
-            "Impressed, the bard becomes your traveling companion, singing tales of your comedic prowess.\n"
-            "'Toss a coin to your Witcher'... oops, wrong universe.\n"
-            "You and your new companion walk out the gates to Whiterun to look for a new quests to conquer"
+            "Inspired by the giants, you try a daring backflip onto a mammoth.\n"
+            "Surprisingly, the mammoth enjoys the acrobatics but the giant not so much.\n"
+            "You barely escaped with the help of your Fus Ro Dah shout."
         )
     input("Press enter to continue ...")
     clear()
