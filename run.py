@@ -134,8 +134,7 @@ def scenarioThree():
             "Surprisingly, the mammoth enjoys the acrobatics but the giant not so much.\n"
             "You barely escaped with the help of your Fus Ro Dah shout.\n"
         )
-        input("Press enter to continue ...")
-        clear()        
+               
 
     elif userInput == "2":
         print("You entered option 2!\n")
@@ -143,12 +142,11 @@ def scenarioThree():
               "and everyone's having a jolly good time.\n"
               "Or so you think until you're surprised attacked by the giant\n"
               "swinging his club making you fly like the dragon you are inside.\n")
-        clear()
+        
         print("Too bad Dovakhiin isn't invicible, you flew straight to oblivion!\n")
-        restart = input("Press enter to restart the game ...")
-        clear()
-        prompt()
-
+        
+    input("Press enter to continue ...")
+    clear()
 
 scenarioOne()
 scenarioTwo()
