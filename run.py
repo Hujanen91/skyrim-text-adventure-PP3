@@ -9,7 +9,7 @@ input("Press Enter to begin ...")
 
 def prompt():
     """Display starting game message"""
-    print("Hello Adventurer, what is your name?")
+    print("\nHello Adventurer, please enter your name below:")
     player = input()
     print("\nWelcome " + player + ", our brave adventurer, to the land of Tamriel,\n" 
           "where dragons soar and sweetrolls are a cherished treasure.\n" 
@@ -55,7 +55,7 @@ def scenarioOne():
             "and suddenly everything becomes hilariously distorted.\n"
             "NPCs start telling punchlines,\n"
             "and you navigate the town with uncontrollable giggles.\n"
-            "Hungry from all the laughter you head towards the tavern."
+            "Hungry from all the laughter you head towards the tavern.\n"
         )
 
     elif userInput == "2":
@@ -64,7 +64,7 @@ def scenarioOne():
             "You haggle with the alchemist for a laughter-inducing explosive.\n"
             "You accidentally toss it into a group of guards,\n"
             "who burst into fits of laughter,\n" 
-            "allowing you to sneak into the local tavern unnoticed."
+            "allowing you to sneak into the local tavern unnoticed.\n"
         )
     input("Press enter to continue ...")
     clear()
@@ -92,7 +92,7 @@ def scenarioTwo():
             "The fowl flock to you,\n" 
             "forming a feathery entourage inside the small tavern.\n"
             "You gain the title 'Chicken chaser' and the chickens follow you\n"
-            "as you leave Whiterun to search for your next adventure."
+            "as you leave Whiterun to search for your next adventure.\n"
         )
 
     elif userInput == "2":
@@ -105,7 +105,7 @@ def scenarioTwo():
             "singing tales of your comedic prowess.\n"
             "'Toss a coin to your witcher'... oops, wrong universe.\n"
             "You and your new companion walk out the gates of Whiterun\n"
-            "to look for a new quests to conquer."
+            "to look for a new quests to conquer.\n"
         )
     input("Press enter to continue ...")
     clear()
@@ -133,13 +133,12 @@ def scenarioThree():
               "and everyone's having a jolly good time.\n"
               "Or so you think until you're surprised attacked by the giant\n"
               "swinging his club making you fly like the dragon you are inside.\n")
-
+        clear()
         print("Too bad Dovakhiin isn't invicible, you flew straight to oblivion!\n")
         restart = input("Press enter to restart the game ...")
 
         if restart is True:
             prompt()
-            clear()
             
 
     elif userInput == "2":
@@ -147,7 +146,7 @@ def scenarioThree():
         print(
             "Inspired by the giants, you try a daring backflip onto a mammoth.\n"
             "Surprisingly, the mammoth enjoys the acrobatics but the giant not so much.\n"
-            "You barely escaped with the help of your Fus Ro Dah shout."
+            "You barely escaped with the help of your Fus Ro Dah shout.\n"
         )
     input("Press enter to continue ...")
     clear()
