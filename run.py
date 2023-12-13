@@ -2,12 +2,20 @@ import os
 import sys
 import pyfiglet
 
+def clear():
+    """
+    Clear out the welcome message and start
+    the game when the user presses enter.
+    """
+    os.system('cls' if os.name == 'nt' else 'clear')
 
-result = pyfiglet.figlet_format("Skyrim Word Adventure Game", font="digital")
-print(result+"A project created for code institute by Jennifer Hujanen\n\n")
-input("Press Enter to begin ...")
 
 def prompt():
+    result = pyfiglet.figlet_format("Skyrim Word Adventure Game", font="digital")
+    print(result+"A project created for code institute by Jennifer Hujanen\n\n")
+    input("Press Enter to begin ...")
+    clear()
+
     """Display starting game message"""
     print("\nHello Adventurer, please enter your name below:")
     player = input()
@@ -18,14 +26,6 @@ def prompt():
     
     print(player + "! Are your ready?\n")
     input("Press Enter to continue ...")
-
-
-def clear():
-    """
-    Clear out the welcome message and start
-    the game when the user presses enter.
-    """
-    os.system('cls' if os.name == 'nt' else 'clear')
 
 
 prompt()
@@ -117,8 +117,8 @@ def scenarioThree():
     print("After walking for a bit out in the plains of Whiterun,\n"
           "you spot what looks like a friendly giant herding mammoths.\n"
           "How do you approach this opportunity?\n")
-    print("Option 1: Join the Mammoth Parade?\n"
-          "Option 2: Attempt a Mammoth Backflip?\n")
+    print("Option 1: Attempt a Mammoth Backflip?\n"
+          "Option 2: Join the Mammoth Parade?\n")
 
     userInput = input("Enter 1 or 2: ")
 
@@ -129,6 +129,16 @@ def scenarioThree():
 
     if userInput == "1":
         print("You entered option 1!\n")
+        print(
+            "Inspired by the giants, you try a daring backflip onto a mammoth.\n"
+            "Surprisingly, the mammoth enjoys the acrobatics but the giant not so much.\n"
+            "You barely escaped with the help of your Fus Ro Dah shout.\n"
+        )
+        input("Press enter to continue ...")
+        clear()        
+
+    elif userInput == "2":
+        print("You entered option 2!\n")
         print("You march alongside the giants, leading a mammoth parade through the plains\n"
               "and everyone's having a jolly good time.\n"
               "Or so you think until you're surprised attacked by the giant\n"
@@ -136,20 +146,8 @@ def scenarioThree():
         clear()
         print("Too bad Dovakhiin isn't invicible, you flew straight to oblivion!\n")
         restart = input("Press enter to restart the game ...")
-
-        if restart is True:
-            prompt()
-            
-
-    elif userInput == "2":
-        print("You entered option 2!\n")
-        print(
-            "Inspired by the giants, you try a daring backflip onto a mammoth.\n"
-            "Surprisingly, the mammoth enjoys the acrobatics but the giant not so much.\n"
-            "You barely escaped with the help of your Fus Ro Dah shout.\n"
-        )
-    input("Press enter to continue ...")
-    clear()
+        clear()
+        prompt()
 
 
 scenarioOne()
