@@ -2,14 +2,16 @@ import os
 import sys
 import pyfiglet
 
+"""
+Clear out the welcome message and start
+the game when the user presses enter.
+"""
 def clear():
-    """
-    Clear out the welcome message and start
-    the game when the user presses enter.
-    """
     os.system('cls' if os.name == 'nt' else 'clear')
 
-
+"""
+Prompt the welcome message and ask the player for a name.
+"""
 def prompt():
     result = pyfiglet.figlet_format("Skyrim Word Adventure Game", font="digital")
     print(result+"A project created for code institute by Jennifer Hujanen\n\n")
@@ -18,17 +20,29 @@ def prompt():
 
     """Display starting game message"""
     print("\nHello Adventurer, please enter your name below:")
-    player = input()
-    print("\nWelcome " + player + ", our brave adventurer, to the land of Tamriel,\n" 
-          "where dragons soar and sweetrolls are a cherished treasure.\n" 
-          "As the chosen Dovakhiin, your quest is not to save the world\n" 
-          "but to embark on a series of hilarious misadventures.\n")
-    
-    print(player + "! Are your ready?\n")
-    input("Press Enter to continue ...")
 
+    """
+    Ask the player for a name. The name is required and needs to
+    be only letters and at least 3 letters long.
+    """
+    while True:
+        try:
+            name = (input(""))
+            if len(name) < 3:
+                print("Sorry, your name needs to be more then 3 letters")
+            else:       
+                print("\nWelcome " + name + ", our brave adventurer, to the land of Tamriel,\n" 
+                    "where dragons soar and sweetrolls are a cherished treasure.\n" 
+                    "As the chosen Dovakhiin, your quest is not to save the world\n" 
+                    "but to embark on a series of hilarious misadventures.\n")
+                print(name + "! Are your ready?\n")
+                input("Press Enter to continue ...")
+                break
+        except Exception as e:
+            print(f"An error occurred: {e}")
 
 prompt()
+# Clear out welcome message:
 clear()
 
 
