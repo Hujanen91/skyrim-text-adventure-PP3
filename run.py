@@ -28,12 +28,15 @@ def prompt():
     while True:
         try:
             name = (input(""))
-            if len(name) < 3:
+            if not name.isalpha():
+                print("Sorry, your name should only contain letters")
+            elif len(name) < 3:
                 print("Sorry, your name needs to be more then 3 letters")
-            else:       
+            else:
+                clear()       
                 print("\nWelcome " + name + ", our brave adventurer, to the land of Tamriel,\n" 
                     "where dragons soar and sweetrolls are a cherished treasure.\n" 
-                    "As the chosen Dovakhiin, your quest is not to save the world\n" 
+                    "As the chosen dragonborn, your quest is not to save the world\n" 
                     "but to embark on a series of hilarious misadventures.\n")
                 print(name + "! Are your ready?\n")
                 input("Press Enter to continue ...")
@@ -62,8 +65,8 @@ def scenarioOne():
     clear()
 
     if userInput == "1":
-        print("You entered option 1!\n"
-              "Chug the Chuckle Elixir!")
+        print("You entered option 1:\n"
+              "Chug the Chuckle Elixir!\n")
         print(
             "You drink a potion labeled 'Chuckletonic',\n"
             "and suddenly everything becomes hilariously distorted.\n"
@@ -73,7 +76,8 @@ def scenarioOne():
         )
 
     elif userInput == "2":
-        print("You entered option 2!\n")
+        print("You entered option 2:\n"
+              "Negotiate for a Guffaw Grenade\n")
         print(
             "You haggle with the alchemist for a laughter-inducing explosive.\n"
             "You accidentally toss it into a group of guards,\n"
