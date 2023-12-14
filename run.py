@@ -27,7 +27,7 @@ def prompt():
     """
     while True:
         try:
-            name = (input(""))
+            name = input("")
             if not name.isalpha():
                 print("Sorry, your name should only contain letters")
             elif len(name) < 3:
@@ -44,6 +44,7 @@ def prompt():
         except Exception as e:
             print(f"An error occurred: {e}")
 
+
 prompt()
 # Clear out welcome message:
 clear()
@@ -53,9 +54,9 @@ def scenarioOne():
 
     print("Scenario 1: The Peculiar Potion Peddler\n")
     print("While walking around in the town of Whiterun you encounter\n" 
-          "a peculiar alchemist selling bizarre potions. What do you do?\n")
+        "a peculiar alchemist selling bizarre potions. What do you do?\n")
     print("Option 1: Chug the Chuckle Elixir?\n"
-          "Option 2: Negotiate for a Guffaw Grenade?\n")
+        "Option 2: Negotiate for a Guffaw Grenade?\n")
 
     userInput = input("Enter 1 or 2: ")
 
@@ -66,35 +67,35 @@ def scenarioOne():
 
     if userInput == "1":
         print("You entered option 1:\n"
-              "Chug the Chuckle Elixir!\n")
+            "Chug the Chuckle Elixir!\n")
         print(
             "You drink a potion labeled 'Chuckletonic',\n"
             "and suddenly everything becomes hilariously distorted.\n"
             "NPCs start telling punchlines,\n"
             "and you navigate the town with uncontrollable giggles.\n"
             "Hungry from all the laughter you head towards the tavern.\n"
-        )
+            )
 
     elif userInput == "2":
         print("You entered option 2:\n"
-              "Negotiate for a Guffaw Grenade\n")
+            "Negotiate for a Guffaw Grenade\n")
         print(
             "You haggle with the alchemist for a laughter-inducing explosive.\n"
             "You accidentally toss it into a group of guards,\n"
             "who burst into fits of laughter,\n" 
             "allowing you to sneak into the local tavern unnoticed.\n"
-        )
+            )
     input("Press enter to continue ...")
     clear()
-
+scenarioOne()
 
 def scenarioTwo():
 
     print("Scenario 2: The Enchanted Lute\n")
     print("After that weird encounter with the peculiar alchemist\n"
-          "you turn around a corner and stumble upon a magical lute. What do you do?\n")
+        "you turn around a corner and stumble upon a magical lute. What do you do?\n")
     print("Option 1: Play the Chicken Serenade?\n"
-          "Option 2: Fus Ro Jam?\n")
+        "Option 2: Fus Ro Jam?\n")
 
     userInput = input("Enter 1 or 2: ")
 
@@ -104,17 +105,19 @@ def scenarioTwo():
     clear()
 
     if userInput == "1":
-        print("You entered option 1!\n")
+        print("You entered option 1:\n"
+            "Play the Chicken Serenade!\n")
         print(
             "You strum a catchy tune dedicated to the town's chickens.\n"
             "The fowl flock to you,\n" 
             "forming a feathery entourage inside the small tavern.\n"
             "You gain the title 'Chicken chaser' and the chickens follow you\n"
             "as you leave Whiterun to search for your next adventure.\n"
-        )
+            )
 
     elif userInput == "2":
-        print("You entered option 2!\n")
+        print("You entered option 2:\n"
+            "Fus Ro Jam\n")
         print(
             "You attempt to play the lute with the power of the Fus Ro Dah shout.\n"
             "The result is a magical musical explosion lifting\n"
@@ -124,19 +127,19 @@ def scenarioTwo():
             "'Toss a coin to your witcher'... oops, wrong universe.\n"
             "You and your new companion walk out the gates of Whiterun\n"
             "to look for a new quests to conquer.\n"
-        )
+            )
     input("Press enter to continue ...")
     clear()
-
+scenarioTwo()
 
 def scenarioThree():
 
     print("Scenario 3: The Jolly Mammoth Ride\n")
     print("After walking for a bit out in the plains of Whiterun,\n"
-          "you spot what looks like a friendly giant herding mammoths.\n"
-          "How do you approach this opportunity?\n")
+        "you spot what looks like a friendly giant herding mammoths.\n"
+        "How do you approach this opportunity?\n")
     print("Option 1: Attempt a Mammoth Backflip?\n"
-          "Option 2: Join the Mammoth Parade?\n")
+        "Option 2: Join the Mammoth Parade?\n")
 
     userInput = input("Enter 1 or 2: ")
 
@@ -146,26 +149,39 @@ def scenarioThree():
     clear()
 
     if userInput == "1":
-        print("You entered option 1!\n")
+        print("You entered option 1:\n"
+            "Attempt a Mammoth Backflip!\n")
         print(
             "Inspired by the giants, you try a daring backflip onto a mammoth.\n"
             "Surprisingly, the mammoth enjoys the acrobatics but the giant not so much.\n"
             "You barely escaped with the help of your Fus Ro Dah shout.\n"
-        )
-               
-
+            )
+                        
     elif userInput == "2":
-        print("You entered option 2!\n")
+        print("You entered option 2:\n"
+            "Join the Mammoth Parade!\n")
         print("You march alongside the giants, leading a mammoth parade through the plains\n"
-              "and everyone's having a jolly good time.\n"
-              "Or so you think until you're surprised attacked by the giant\n"
-              "swinging his club making you fly like the dragon you are inside.\n")
-        
+            "and everyone's having a jolly good time.\n"
+            "Or so you think until you're surprised attacked by the giant\n"
+            "swinging his club making you fly like the dragon you are inside.\n")
+        clear()
         print("Too bad Dovakhiin isn't invicible, you flew straight to oblivion!\n")
-        
-    input("Press enter to continue ...")
-    clear()
 
-scenarioOne()
-scenarioTwo()
-scenarioThree()
+        play_again = input("Press enter to try again ...")
+        if play_again == '':
+            clear()       
+            prompt()        
+scenarioThree()               
+    #input("Press enter to continue ...")
+    #clear()
+
+# Game Loop
+while True:
+    clear()
+    scenarioOne()
+    scenarioTwo()
+    scenarioThree()
+    scenarioFour()
+    scenarioFive()
+    scenarioSix()
+    endGame()
