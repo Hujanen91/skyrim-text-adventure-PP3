@@ -170,10 +170,53 @@ def scenarioThree():
         play_again = input("Press enter to try again ...")
         if play_again == '':
             clear()       
-            prompt()        
+            prompt()
+    clear()      
 scenarioThree()               
-    #input("Press enter to continue ...")
-    #clear()
+
+def scenarioFour():
+
+    print("Scenario 4: The Whimsical Werewolf\n")
+    print("You got tired of your companion Bard singing your ears off\n"
+          "so not short after your travels outside of Whiterun you\n"
+          "Fos-Ro-Dah his lute into oblivion and the Bard left.\n"
+          "As nightfall enters and the moon rises, you feel\n"
+          "the transformation coming on. What's your approach?\n")
+    print("Option 1: Embrace the Dance of the Werewolf?\n"
+          "Option 2: Attempt Werewolf Stand-Up Comedy?\n")
+
+    userInput = input("Enter 1 or 2: ")
+
+    while userInput not in {"1", "2"}:
+        print("Please enter 1 or 2")
+        userInput = input("Enter 1 or 2: ")
+    clear()
+
+    if userInput == "1":
+        print("You entered option 1:\n"
+              "Embrace the Dance of the Werewolf!\n")
+        print(
+            "You transform and start a moonlit dance party with other werewolves.\n"
+            "The locals join in, and you become the talk of the town as the\n"
+            "'Howling Dance Champion.' Morning comes and you decide to contune further\n"
+            "along on this weird and random journey.\n"
+            )
+
+    elif userInput == "2":
+        print("You entered option 2:\n"
+              "Attempt Werewolf Stand-Up Comedy!\n")
+        print(
+            "You try telling jokes in your werewolf form,\n"
+            "but the audience finds your delivery too 'howl-arious'.\n"
+            "The Jarl appoints you as the official court jester.\n"
+            "You tell the Jarl thanks but no thanks, you're only\n"
+            "interest right now is continuing on with your journey\n"
+            )
+    input("Press enter to continue ...")
+    clear()
+scenarioFour()
+
+
 
 # Game Loop
 while True:
