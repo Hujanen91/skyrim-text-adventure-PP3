@@ -2,7 +2,10 @@ import os
 import sys
 import pyfiglet
 import random
+import colorama
+from colorama import Fore, Back, Style
 from riddles import RIDDLES
+colorama.init(autoreset=True)
 
 """
 Clear out the welcome message and start
@@ -15,7 +18,7 @@ def section_border():
     print("~" * 65)
 
 def verticle_border():
-    print("*" + "" + 25 + "*")
+    print(Fore.YELLOW + "*" + "" + 25 + "*")
 
 """
 Prompt the welcome message and ask the player for a name.
@@ -29,6 +32,7 @@ def prompt():
     """Display starting game message"""
     section_border()
     print("\nHello Adventurer, please enter your name below:")
+    
 
     """
     Ask the player for a name. The name is required and needs to
@@ -37,11 +41,14 @@ def prompt():
     while True:
         try:
             name = input("")
-            section_border()
+            
             if not name.isalpha():
-                print("Sorry, your name should only contain letters")
+                print(Fore.RED + "Sorry, your name should only contain letters")
+                section_border()
             elif len(name) < 3:
-                print("Sorry, your name needs to be more then 3 letters")
+                print(Fore.RED + "Sorry, your name needs to be more then 3 letters")
+                section_border()
+          
             else:
                 clear()
                 section_border()      
