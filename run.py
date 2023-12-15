@@ -1,6 +1,7 @@
 import os
 import sys
 import pyfiglet
+from riddles import RIDDLES
 
 """
 Clear out the welcome message and start
@@ -8,7 +9,6 @@ the game when the user presses enter.
 """
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
-
 
 
 """
@@ -48,9 +48,9 @@ def prompt():
 
 
 def restart_program():
-    """Restarts the current program.
-    Note: this function does not return. Any cleanup action (like
-    saving data) must be done before calling this function."""
+    """
+    Restarts the current program.
+    """
     python = sys.executable
     os.execl(python, python, * sys.argv)
     restart_program()
@@ -59,7 +59,6 @@ def restart_program():
 prompt()
 # Clear out welcome message:
 clear()
-
 
 def scenarioOne():
 
