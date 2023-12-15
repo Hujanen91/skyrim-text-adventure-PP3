@@ -9,6 +9,8 @@ the game when the user presses enter.
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
 
+
+
 """
 Prompt the welcome message and ask the player for a name.
 """
@@ -43,6 +45,15 @@ def prompt():
                 break
         except Exception as e:
             print(f"An error occurred: {e}")
+
+
+def restart_program():
+    """Restarts the current program.
+    Note: this function does not return. Any cleanup action (like
+    saving data) must be done before calling this function."""
+    python = sys.executable
+    os.execl(python, python, * sys.argv)
+    restart_program()
 
 
 prompt()
@@ -156,7 +167,9 @@ def scenarioThree():
             "Surprisingly, the mammoth enjoys the acrobatics but the giant not so much.\n"
             "You barely escaped with the help of your Fus Ro Dah shout.\n"
             )
-                        
+        input("Press enter to continue ...")
+        clear()
+
     elif userInput == "2":
         print("You entered option 2:\n"
             "Join the Mammoth Parade!\n")
@@ -166,16 +179,13 @@ def scenarioThree():
             "swinging his club making you fly like the dragon you are inside.\n")
         clear()
         print("Too bad Dovakhiin isn't invicible, you flew straight to oblivion!\n")
-
-        play_again = input("Press enter to try again ...")
-        if play_again == '':
-            clear()       
-            prompt()
-    clear()      
+        input("Press enter to restart ...")
+        clear()
+        restart_program()
+        
 scenarioThree()               
 
 def scenarioFour():
-
     print("Scenario 4: The Whimsical Werewolf\n")
     print("You got tired of your companion Bard singing your ears off\n"
           "so not short after your travels outside of Whiterun you\n"
@@ -216,15 +226,9 @@ def scenarioFour():
     clear()
 scenarioFour()
 
+restart_program()
 
 
 # Game Loop
-while True:
-    clear()
-    scenarioOne()
-    scenarioTwo()
-    scenarioThree()
-    scenarioFour()
-    scenarioFive()
-    scenarioSix()
-    endGame()
+
+    
