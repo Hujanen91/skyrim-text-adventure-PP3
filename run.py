@@ -1,6 +1,7 @@
 import os
 import sys
 import pyfiglet
+import random
 from riddles import RIDDLES
 
 """
@@ -9,7 +10,6 @@ the game when the user presses enter.
 """
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
-
 
 """
 Prompt the welcome message and ask the player for a name.
@@ -35,13 +35,13 @@ def prompt():
             elif len(name) < 3:
                 print("Sorry, your name needs to be more then 3 letters")
             else:
-                clear()       
+                clear()     
                 print("\nWelcome " + name + ", our brave adventurer, to the land of Tamriel,\n" 
                     "where dragons soar and sweetrolls are a cherished treasure.\n" 
                     "As the chosen dragonborn, your quest is not to save the world\n" 
                     "but to embark on a series of hilarious misadventures.\n")
-                print(name + "! Are your ready?\n")
-                input("Press Enter to continue ...")
+                print(name + "! Are your ready?")
+                input("\nPress Enter to continue ...")
                 break
         except Exception as e:
             print(f"An error occurred: {e}")
@@ -63,8 +63,8 @@ clear()
 
 def scenarioOne():
 
-    print("Scenario 1: The Peculiar Potion Peddler\n")
-    print("While walking around in the town of Whiterun you encounter\n" 
+    print("Scenario 1: The Peculiar Potion Peddler")
+    print("\nWhile walking around in the town of Whiterun you encounter\n" 
         "a peculiar alchemist selling bizarre potions. What do you do?\n")
     print("Option 1: Chug the Chuckle Elixir?\n"
         "Option 2: Negotiate for a Guffaw Grenade?\n")
@@ -80,7 +80,7 @@ def scenarioOne():
         print("You entered option 1:\n"
             "Chug the Chuckle Elixir!\n")
         print(
-            "You drink a potion labeled 'Chuckletonic',\n"
+            "\nYou drink a potion labeled 'Chuckletonic',\n"
             "and suddenly everything becomes hilariously distorted.\n"
             "NPCs start telling punchlines,\n"
             "and you navigate the town with uncontrollable giggles.\n"
@@ -91,7 +91,7 @@ def scenarioOne():
         print("You entered option 2:\n"
             "Negotiate for a Guffaw Grenade\n")
         print(
-            "You haggle with the alchemist for a laughter-inducing explosive.\n"
+            "\nYou haggle with the alchemist for a laughter-inducing explosive.\n"
             "You accidentally toss it into a group of guards,\n"
             "who burst into fits of laughter,\n" 
             "allowing you to sneak into the local tavern unnoticed.\n"
@@ -125,6 +125,9 @@ def scenarioTwo():
             "forming a feathery entourage inside the small tavern.\n"
             "You gain the title 'Chicken chaser' and the chickens follow you\n"
             "as you leave Whiterun to search for your next adventure.\n"
+            "But before you could leave a bard decides to follow along\n"
+            "because a 'Chicken chaser' seems like a perfect adventurer to write\n"
+            "songs about\n"
             )
 
     elif userInput == "2":
@@ -167,7 +170,8 @@ def scenarioThree():
         print(
             "Inspired by the giants, you try a daring backflip onto a mammoth.\n"
             "Surprisingly, the mammoth enjoys the acrobatics but the giant not so much.\n"
-            "You barely escaped with the help of your Fus Ro Dah shout.\n"
+            "You barely escaped with the help of your Fus Ro Dah shout\n"
+            "and the bard is right behind you singing songs about what just happened\n"
             )
         input("Press enter to continue ...")
         clear()
@@ -255,8 +259,10 @@ def scenarioFive():
         print(
             "You engage the ghost in a friendly conversation,\n"
             "discovering it's a bored bard from ancient times.\n"
-            "You form a spectral band, touring Skyrim's crypts\n"
+            "You form a spectral band and will later tour Skyrim's crypts\n"
             "and spreading spooky merriment.\n"
+            "But for now you continue back out from the crypt\n"
+            "with Lydia right behind you\n"
             )
 
     elif userInput == "2":
@@ -265,16 +271,60 @@ def scenarioFive():
         print(
             "You try to tell ghost-themed jokes,\n"
             "inadvertently making the ghost laugh so hard it disappears.\n"
-            "The tomb becomes a popular comedy club for ghosts,\n"
-            "and you gain a legion of spectral fans.\n"
+            "The tomb later becomes a popular comedy club for ghosts,\n"
+            "and you'll gain a legion of spectral fans.\n"
+            "But for now you'll continue on your journey with Lyda\n"
+            "right behind you. You decide to leave the crypt to continue\n"
+            "your travels\n"
             )
     input("Press enter to continue ...")
     clear()
 scenarioFive()
 
-restart_program()
+def scenarioSix():
+    riddle_index = random.randint(0, len(RIDDLES) - 1)
+    selected_riddle = RIDDLES[riddle_index]
 
+    print("Scenario 6: Cicero the ever so annoying jester\n")
+    print("Right before leaving the crypt Cicero, the eccentric and annoying\n"
+          "jester appears. He has sealed off the entrance and wont let you pass until you solve a riddle\n"
+          "'Ah Adventurer! Cicero sees you approach, yes, yes.\n"
+          "But to pass, a challenge awaits, a riddle to tease that clever mind of yours.\n"
+          "Oh, and a delightful one! Listen carefully, my dear friend:\n\n")
+    
+    print(selected_riddle["riddle"])
 
-# Game Loop
+    for i, option in enumerate(selected_riddle["options"], start=1):
+        print(f"Option {i}: {option}")
+
+    user_input = input(f"Enter the number of your answer (1-{len(selected_riddle['options'])}): ")
+
+    while not user_input.isdigit() or int(user_input) not in range(1, len(selected_riddle['options']) + 1):
+        print(f"Please enter a valid option (1-{len(selected_riddle['options'])}): ")
+        user_input = input(f"Enter the number of your answer (1-{len(selected_riddle['options'])}): \n")
+
+    selected_option = selected_riddle["options"][int(user_input) - 1]
+
+    if selected_option == selected_riddle["correct_answer"]:
+        print("\nCicero applauds your wit! You may pass.")
+        clear()
+        print("Congratulations! You, the dragonborn of Skyrim,\n"
+              "managed to solve the riddle and continue on with your journey.\n"
+              "You have turned the harsh world of Tamriel into a realm of laughter and joy.\n"
+              "The people sing songs of your whimsical exploits,\n"
+              "and you became the legendary hero of humor.\n"
+              "May your journey continue to be filled with hilarity and merriment!")
+        input("Press enter to restart ...")
+        clear()
+        restart_program()
+    else:
+        print("Alas! Cicero cackles with mockery.\n" 
+             f"The correct answer was {selected_riddle['correct_answer']}.")
+        print("\nCicero closes the exit and you are forced back down in to the tomb.")
+        input("Press enter to restart ...")
+        clear()
+        restart_program()
+
+scenarioSix()
 
     
