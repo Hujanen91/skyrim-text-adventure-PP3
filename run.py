@@ -11,6 +11,12 @@ the game when the user presses enter.
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
 
+def section_border():
+    print("~" * 65)
+
+def verticle_border():
+    print("*" + "" + 25 + "*")
+
 """
 Prompt the welcome message and ask the player for a name.
 """
@@ -35,12 +41,15 @@ def prompt():
             elif len(name) < 3:
                 print("Sorry, your name needs to be more then 3 letters")
             else:
-                clear()     
+                clear()
+                section_border()      
                 print("\nWelcome " + name + ", our brave adventurer, to the land of Tamriel,\n" 
                     "where dragons soar and sweetrolls are a cherished treasure.\n" 
                     "As the chosen dragonborn, your quest is not to save the world\n" 
                     "but to embark on a series of hilarious misadventures.\n")
+                section_border()
                 print(name + "! Are your ready?")
+                section_border()
                 input("\nPress Enter to continue ...")
                 break
         except Exception as e:
@@ -56,16 +65,19 @@ def restart_program():
     restart_program()
 
 
+
 prompt()
 # Clear out welcome message:
 clear()
 
 
 def scenarioOne():
-
+    section_border()
     print("Scenario 1: The Peculiar Potion Peddler")
+    section_border()
     print("\nWhile walking around in the town of Whiterun you encounter\n" 
         "a peculiar alchemist selling bizarre potions. What do you do?\n")
+    section_border()
     print("Option 1: Chug the Chuckle Elixir?\n"
         "Option 2: Negotiate for a Guffaw Grenade?\n")
 
@@ -79,6 +91,7 @@ def scenarioOne():
     if userInput == "1":
         print("You entered option 1:\n"
             "Chug the Chuckle Elixir!\n")
+        section_border()
         print(
             "\nYou drink a potion labeled 'Chuckletonic',\n"
             "and suddenly everything becomes hilariously distorted.\n"
@@ -86,16 +99,19 @@ def scenarioOne():
             "and you navigate the town with uncontrollable giggles.\n"
             "Hungry from all the laughter you head towards the tavern.\n"
             )
+        section_border()
 
     elif userInput == "2":
         print("You entered option 2:\n"
             "Negotiate for a Guffaw Grenade\n")
+        section_border()
         print(
             "\nYou haggle with the alchemist for a laughter-inducing explosive.\n"
             "You accidentally toss it into a group of guards,\n"
             "who burst into fits of laughter,\n" 
             "allowing you to sneak into the local tavern unnoticed.\n"
             )
+        section_border()
     input("Press enter to continue ...")
     clear()
 scenarioOne()
