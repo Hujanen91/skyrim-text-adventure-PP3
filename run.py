@@ -335,7 +335,15 @@ def scenarioFive():
     clear()
 scenarioFive()
 
+ 
 def scenarioSix():
+    """
+    Simulates an encounter with Cicero, the eccentric jester, in a crypt. Cicero presents a riddle
+    that the player must solve to proceed. The function randomly selects a riddle from the predefined
+    set of riddles, displays it along with answer options, prompts the player for input, and validates
+    the response. If the answer is correct, Cicero allows the player to pass; otherwise, the game restarts.
+    """
+    
     riddle_index = random.randint(0, len(RIDDLES) - 1)
     selected_riddle = RIDDLES[riddle_index]
     section_border()
