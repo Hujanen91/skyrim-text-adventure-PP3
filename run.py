@@ -5,6 +5,7 @@ import random
 import colorama
 from colorama import Fore, Back, Style
 from riddles import RIDDLES
+
 colorama.init(autoreset=True)
 
 """
@@ -17,22 +18,20 @@ def clear():
 def section_border():
     print("~" * 65)
 
-def verticle_border():
-    print(Fore.YELLOW + "*" + "" + 25 + "*")
-
 """
 Prompt the welcome message and ask the player for a name.
 """
 def prompt():
     result = pyfiglet.figlet_format("Skyrim Word Adventure Game", font="digital")
     print(result+"A project created for code institute by Jennifer Hujanen\n\n")
-    input("Press Enter to begin ...")
+    input(Fore.YELLOW + "Press Enter to begin ...")
     clear()
 
     """Display starting game message"""
+    print()
     section_border()
-    print("\nHello Adventurer, please enter your name below:")
-    
+    print("Hello Adventurer, please enter your name below:")
+    section_border()
 
     """
     Ask the player for a name. The name is required and needs to
@@ -59,10 +58,10 @@ def prompt():
                 section_border()
                 print(name + "! Are your ready?")
                 section_border()
-                input("\nPress Enter to continue ...")
+                input(Fore.YELLOW + "\nPress Enter to continue ..." + Fore.RESET)
                 break
         except Exception as e:
-            print(f"An error occurred: {e}")
+            print(Fore.RED + f"An error occurred: {e}")
 
 
 def restart_program():
@@ -82,13 +81,13 @@ clear()
 
 def scenarioOne():
     section_border()
-    print("Scenario 1: The Peculiar Potion Peddler")
+    print(Fore.YELLOW + "Scenario 1: The Peculiar Potion Peddler" + Fore.RESET)
     section_border()
     print("\nWhile walking around in the town of Whiterun you encounter\n" 
         "a peculiar alchemist selling bizarre potions. What do you do?\n")
     section_border()
-    print("Option 1: Chug the Chuckle Elixir?\n"
-        "Option 2: Negotiate for a Guffaw Grenade?\n")
+    print(Fore.BLUE + "Option 1: Chug the Chuckle Elixir?\n"
+          "Option 2: Negotiate for a Guffaw Grenade?\n")
 
     userInput = input("Enter 1 or 2: ")
 
@@ -99,7 +98,7 @@ def scenarioOne():
 
     if userInput == "1":
         section_border()
-        print("You entered option 1:"
+        print(Fore.BLUE + "You entered option 1:"
             "\nChug the Chuckle Elixir!")
         section_border()
         print(
@@ -113,7 +112,7 @@ def scenarioOne():
 
     elif userInput == "2":
         section_border()
-        print("You entered option 2:"
+        print(Fore.BLUE + "You entered option 2:"
             "\nNegotiate for a Guffaw Grenade")
         section_border()
         print(
@@ -123,19 +122,19 @@ def scenarioOne():
             "allowing you to sneak into the local tavern unnoticed.\n"
             )
         section_border()
-    input("Press enter to continue ...")
+    input(Fore.YELLOW + "Press enter to continue ..." + Fore.RESET)
     clear()
 scenarioOne()
 
 
 def scenarioTwo():
     section_border()
-    print("Scenario 2: The Enchanted Lute")
+    print(Fore.YELLOW + "Scenario 2: The Enchanted Lute" + Fore.RESET)
     section_border()
     print("\nAfter that weird encounter with the peculiar alchemist\n"
         "you turn around a corner and stumble upon a magical lute. What do you do?\n")
     section_border()
-    print("Option 1: Play the Chicken Serenade?\n"
+    print(Fore.BLUE + "Option 1: Play the Chicken Serenade?\n"
         "Option 2: Fus Ro Jam?\n")
     
     userInput = input("Enter 1 or 2: ")
@@ -147,7 +146,7 @@ def scenarioTwo():
 
     if userInput == "1":
         section_border()
-        print("You entered option 1:"
+        print(Fore.BLUE + "You entered option 1:"
             "\nPlay the Chicken Serenade!")
         section_border()
         print(
@@ -164,7 +163,7 @@ def scenarioTwo():
 
     elif userInput == "2":
         section_border()
-        print("You entered option 2:"
+        print(Fore.BLUE + "You entered option 2:"
             "\nFus Ro Jam")
         section_border()
         print(
@@ -178,20 +177,20 @@ def scenarioTwo():
             "to look for a new quests to conquer.\n"
             )
         section_border()
-    input("Press enter to continue ...")
+    input(Fore.YELLOW + "Press enter to continue ..." + Fore.RESET)
     clear()
 scenarioTwo()
 
 
 def scenarioThree():
     section_border()
-    print("Scenario 3: The Jolly Mammoth Ride")
+    print(Fore.YELLOW + "Scenario 3: The Jolly Mammoth Ride" + Fore.RESET)
     section_border()
     print("\nAfter walking for a bit out in the plains of Whiterun,\n"
         "you spot what looks like a friendly giant herding mammoths.\n"
         "How do you approach this opportunity?\n")
     section_border()
-    print("Option 1: Attempt a Mammoth Backflip?\n"
+    print(Fore.BLUE + "Option 1: Attempt a Mammoth Backflip?\n"
         "Option 2: Join the Mammoth Parade?\n")
 
     userInput = input("Enter 1 or 2: ")
@@ -203,7 +202,7 @@ def scenarioThree():
 
     if userInput == "1":
         section_border()
-        print("You entered option 1:"
+        print(Fore.BLUE + "You entered option 1:"
             "\nAttempt a Mammoth Backflip!")
         section_border()
         print(
@@ -213,12 +212,12 @@ def scenarioThree():
             "and the bard is right behind you singing songs about what just happened\n"
             )
         section_border()
-        input("Press enter to continue ...")
+        input(Fore.YELLOW + "Press enter to continue ..." + Fore.RESET)
         clear()
 
     elif userInput == "2":
         section_border()
-        print("You entered option 2:"
+        print(Fore.BLUE + "You entered option 2:"
             "\nJoin the Mammoth Parade!")
         section_border()
         print("\nYou march alongside the giants, leading a mammoth parade through the plains\n"
@@ -228,8 +227,8 @@ def scenarioThree():
         section_border()
         clear()
         section_border()
-        print("\nToo bad Dovakhiin isn't invicible, you flew straight to oblivion!\n")
-        input("Press enter to restart ...\n")
+        print(Fore.RED + "\nToo bad Dovakhiin isn't invicible, you flew straight to oblivion!\n")
+        input(Fore.RED + "Press enter to restart ...\n" + Fore.RESET)
         section_border()
         clear()
         restart_program()
@@ -239,7 +238,7 @@ scenarioThree()
 
 def scenarioFour():
     section_border()
-    print("Scenario 4: The Whimsical Werewolf")
+    print(Fore.YELLOW + "Scenario 4: The Whimsical Werewolf")
     section_border()
     print("\nYou got tired of your companion Bard singing your ears off\n"
           "so not short after your travels outside of Whiterun you\n"
@@ -247,7 +246,7 @@ def scenarioFour():
           "As nightfall enters and the moon rises, you feel\n"
           "the transformation coming on. What's your approach?\n")
     section_border()
-    print("Option 1: Embrace the Dance of the Werewolf?\n"
+    print(Fore.BLUE + "Option 1: Embrace the Dance of the Werewolf?\n"
           "Option 2: Attempt Werewolf Stand-Up Comedy?\n")
 
     userInput = input("Enter 1 or 2: ")
@@ -259,8 +258,8 @@ def scenarioFour():
 
     if userInput == "1":
         section_border()
-        print("You entered option 1:"
-              "\nEmbrace the Dance of the Werewolf!")
+        print(Fore.BLUE + "You entered option 1:"
+              "\nEmbrace the Dance of the Werewolf!" + Fore.RESET)
         section_border()
         print(
             "\nYou transform and start a moonlit dance party with other werewolves.\n"
@@ -272,7 +271,7 @@ def scenarioFour():
 
     elif userInput == "2":
         section_border()
-        print("You entered option 2:"
+        print(Fore.BLUE + "You entered option 2:"
               "\nAttempt Werewolf Stand-Up Comedy!")
         section_border()
         print(
@@ -283,14 +282,14 @@ def scenarioFour():
             "interest right now is continuing on with your journey\n"
             )
         section_border()
-    input("Press enter to continue ...")
+    input(Fore.YELLOW + "Press enter to continue ..." + Fore.RESET)
     clear()
 scenarioFour()
 
 
 def scenarioFive():
     section_border()
-    print("Scenario 5: The Ancient Tomb of Laughter")
+    print(Fore.YELLOW + "Scenario 5: The Ancient Tomb of Laughter" + Fore.RESET)
     section_border()
     print("\nYou're joined by your 'always-in-my-way' trusty companion\n"
           "Lydia and the two of you continue on your journy.\n"
@@ -298,7 +297,7 @@ def scenarioFive():
           "Deep in the tomb you encounter a ghostly figure.\n"
           "How do you approach the situation?\n")
     section_border()
-    print("Option 1: The Ghost Whisperer?\n"
+    print(Fore.BLUE + "Option 1: The Ghost Whisperer?\n"
           "Option 2: Startle Stand-Up?\n")
 
     userInput = input("Enter 1 or 2: ")
@@ -310,7 +309,7 @@ def scenarioFive():
 
     if userInput == "1":
         section_border()
-        print("You entered option 1:"
+        print(Fore.BLUE + "You entered option 1:"
               "\nThe Ghost Whisperer!")
         section_border()
         print(
@@ -325,7 +324,7 @@ def scenarioFive():
 
     elif userInput == "2":
         section_border()
-        print("You entered option 2:"
+        print(Fore.BLUE + "You entered option 2:"
               "\nStartle Stand-Up!")
         section_border()
         print(
@@ -338,7 +337,7 @@ def scenarioFive():
             "your travels\n"
             )
         section_border()
-    input("Press enter to continue ...")
+    input(Fore.YELLOW + "Press enter to continue ..." + Fore.RESET)
     clear()
 scenarioFive()
 
@@ -350,20 +349,22 @@ def scenarioSix():
     set of riddles, displays it along with answer options, prompts the player for input, and validates
     the response. If the answer is correct, Cicero allows the player to pass; otherwise, the game restarts.
     """
-    
     riddle_index = random.randint(0, len(RIDDLES) - 1)
     selected_riddle = RIDDLES[riddle_index]
+
     section_border()
-    print("Scenario 6: Cicero the ever so annoying jester")
+    print(Fore.YELLOW + "Scenario 6: Cicero the ever so annoying jester")
     section_border()
     print("\nRight before leaving the crypt Cicero, the eccentric and annoying\n"
-          "jester appears. He has sealed off the entrance and wont let you pass until you solve a riddle\n"
+          "jester appears. He has sealed off the entrance and wont let you\n"
+          "pass until you solve a riddle.\n"
           "'Ah Adventurer! Cicero sees you approach, yes, yes.\n"
-          "But to pass, a challenge awaits, a riddle to tease that clever mind of yours.\n"
-          "Oh, and a delightful one! Listen carefully, my dear friend:\n")
+          "But to pass, a challenge awaits, a riddle to tease \n"
+          "that clever mind of yours. Oh, and a delightful one!\n" 
+          "Listen carefully, my dear friend':\n")
     section_border()
     
-    print(selected_riddle["riddle"])
+    print(Fore.BLUE + selected_riddle["riddle"])
 
     for i, option in enumerate(selected_riddle["options"], start=1):
         print(f"Option {i}: {option}")
@@ -378,7 +379,7 @@ def scenarioSix():
 
     if selected_option == selected_riddle["correct_answer"]:
         section_border()
-        print("\nCicero applauds your wit! You may pass.")
+        print(Fore.YELLOW + "\nCicero applauds your wit! You may pass.")
         section_border()
         clear()
         section_border()
@@ -389,17 +390,19 @@ def scenarioSix():
               "and you became the legendary hero of humor.\n"
               "May your journey continue to be filled with hilarity and merriment!\n")
         section_border()
-        input("Press enter to restart ...")
+        input(Fore.YELLOW + "Press enter to restart ..." + Fore.RESET)
         clear()
         restart_program()
     else:
+        clear()
         section_border()
-        print("Alas! Cicero cackles with mockery.\n" 
+        print(Fore.RED + "Alas! Cicero cackles with mockery.\n" 
              f"The correct answer was {selected_riddle['correct_answer']}.")
         section_border()
-        print("\nCicero closes the exit and you are forced back down in to the tomb.\n")
+        print("\nCicero closes the entrance and you are forced\n"
+              "back down in to the tomb. You have lost the game....\n")
         section_border()
-        input("Press enter to restart ...")
+        input(Fore.RED + "Press enter to restart ..." + Fore.RESET)
         clear()
         restart_program()
 
