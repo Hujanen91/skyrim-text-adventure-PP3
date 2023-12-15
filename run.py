@@ -60,6 +60,7 @@ prompt()
 # Clear out welcome message:
 clear()
 
+
 def scenarioOne():
 
     print("Scenario 1: The Peculiar Potion Peddler\n")
@@ -98,6 +99,7 @@ def scenarioOne():
     input("Press enter to continue ...")
     clear()
 scenarioOne()
+
 
 def scenarioTwo():
 
@@ -142,6 +144,7 @@ def scenarioTwo():
     clear()
 scenarioTwo()
 
+
 def scenarioThree():
 
     print("Scenario 3: The Jolly Mammoth Ride\n")
@@ -184,7 +187,9 @@ def scenarioThree():
         
 scenarioThree()               
 
+
 def scenarioFour():
+
     print("Scenario 4: The Whimsical Werewolf\n")
     print("You got tired of your companion Bard singing your ears off\n"
           "so not short after your travels outside of Whiterun you\n"
@@ -224,6 +229,48 @@ def scenarioFour():
     input("Press enter to continue ...")
     clear()
 scenarioFour()
+
+
+def scenarioFive():
+
+    print("Scenario 5: The Ancient Tomb of Laughter\n")
+    print("You're joined by your 'always-in-my-way' trusty companion\n"
+          "Lydia and the two of you continue on your journy.\n"
+          "You stumble upon an ancient tomb and start exploring it.\n"
+          "Deep in the tomb you encounter a ghostly figure.\n"
+          "How do you approach the situation?\n")
+    print("Option 1: The Ghost Whisperer?\n"
+          "Option 2: Startle Stand-Up?\n")
+
+    userInput = input("Enter 1 or 2: ")
+
+    while userInput not in {"1", "2"}:
+        print("Please enter 1 or 2")
+        userInput = input("Enter 1 or 2: ")
+    clear()
+
+    if userInput == "1":
+        print("You entered option 1:\n"
+              "The Ghost Whisperer!\n")
+        print(
+            "You engage the ghost in a friendly conversation,\n"
+            "discovering it's a bored bard from ancient times.\n"
+            "You form a spectral band, touring Skyrim's crypts\n"
+            "and spreading spooky merriment.\n"
+            )
+
+    elif userInput == "2":
+        print("You entered option 2:\n"
+              "Startle Stand-Up!\n")
+        print(
+            "You try to tell ghost-themed jokes,\n"
+            "inadvertently making the ghost laugh so hard it disappears.\n"
+            "The tomb becomes a popular comedy club for ghosts,\n"
+            "and you gain a legion of spectral fans.\n"
+            )
+    input("Press enter to continue ...")
+    clear()
+scenarioFive()
 
 restart_program()
 
