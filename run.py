@@ -381,10 +381,9 @@ def scenarioSix():
     selected_option = selected_riddle["options"][int(user_input) - 1]
 
     if selected_option == selected_riddle["correct_answer"]:
-        section_border()
-        print(Fore.YELLOW + "\nCicero applauds your wit! You may pass.")
-        section_border()
         clear()
+        section_border()
+        print(Fore.YELLOW + "\nCicero applauds your wit! You may pass.\n")
         section_border()
         print("\nCongratulations! You, the dragonborn of Skyrim,\n"
               "managed to solve the riddle and continue on with your journey.\n"

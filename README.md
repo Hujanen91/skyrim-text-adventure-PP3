@@ -76,10 +76,29 @@
 - **Scenario three death**
 
     - In scenario three the player will die when picking option 2.
-        A message will be displayed telling the player they died and asking the player to press enter to restart the game
+        A message will be displayed telling the player they died and asking the player to press enter to restart the game. Pressing enter will send the player back to the Start screen.
 
-        ![screenshot](docs/scenario_3_death.png)
+        ![screenshot](docs/scenariothree_death.png)
 
+- **Scenario Six Riddle**
+
+    - At the last option the player meets a jester called Cicero. 
+        He will ask the player to solve a riddle to pass him.
+
+        ![screenshot](docs/option_picked.png)
+
+- **Riddle Correct Answer**
+
+    - If the correct answer is picked Cicero will tell the player that they passed and you win the game.
+
+        ![screenshot](docs/option_picked.png)
+
+- **Riddle Wrong Answer**
+
+    - When picking an option the screen will display what option the player picked, the name of the option and the outcome of the option made.
+        The player is told to press enter to continue
+
+        ![screenshot](docs/option_picked.png)
 
 
 - **Input validation**
