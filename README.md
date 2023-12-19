@@ -227,18 +227,18 @@ If using any confidential credentials, such as `CREDS.json` or `env.py` data, th
 
 You can clone the repository by following these steps:
 
-1. Go to the [GitHub repository](https://github.com/Jonathan97-web/Mad-King) 
+1. Go to the [GitHub repository](https://github.com/Hujanen91/skyrim-text-adventure-PP3) 
 2. Locate the Code button above the list of files and click it 
 3. Select if you prefer to clone using HTTPS, SSH, or GitHub CLI and click the copy button to copy the URL to your clipboard
 4. Open Git Bash or Terminal
 5. Change the current working directory to the one where you want the cloned directory
 6. In your IDE Terminal, type the following command to clone my repository:
-	- `git clone https://github.com/Jonathan97-web/Mad-King.git`
+	- `git clone https://github.com/Hujanen91/skyrim-text-adventure-PP3`
 7. Press Enter to create your local clone.
 
 Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Jonathan97-web/Mad-King)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Hujanen91/skyrim-text-adventure-PP3)
 
 Please note that in order to directly open the project in Gitpod, you need to have the browser extension installed.
 A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/configure/user-settings/browser-extension).
@@ -248,7 +248,7 @@ A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/conf
 By forking the GitHub Repository, we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original owner's repository.
 You can fork this repository by using the following steps:
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/Jonathan97-web/Mad-King)
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/Hujanen91/skyrim-text-adventure-PP3)
 2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
 3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
 
@@ -264,9 +264,10 @@ As of writing this there will be no difference between the local and the deploye
 
 | Source | Location | Notes |
 | --- | --- | --- |
-| [YouTube](https://www.youtube.com/watch?v=u51Zjlnui4Y) | PP3 terminal | tutorial for adding color to the Python terminal |
+| [Colorama](https://pypi.org/project/colorama/) | PP3 terminal | Page to help add colors in the terminal |
+| [ASCII](https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/) | PP3 terminal | ASCII art came from this page |
 | [Github](https://gist.github.com/jrosco/d01b28c2f37100bb5278) | PP3 terminal | Code for restarting the game |
-
+| [ChatGPT](https://chat.openai.com/) | PP3 terminal | Content for Options, Answers and Riddles was generated with ChatGPT and edited to match the following scenarios. NO code was generated with the help of ChatGPT. |
 
 ### Media
 
@@ -279,7 +280,7 @@ For this project no external media was used for creation of this project.
 Use this space to provide attribution to any supports that helped, encouraged, or supported you throughout the development stages of this project.
 A few examples have been provided below to give you some ideas.
 
-- I would like to thank my Code Institute mentor, [T](N) For his support through this project.
+- I would like to thank my Code Institute mentor, [Gareth Mc Girr](https://github.com/Gareth-McGirr) For his support through this project.
 - I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support; it kept me going during periods of self doubt and imposter syndrome.
 
 ---
