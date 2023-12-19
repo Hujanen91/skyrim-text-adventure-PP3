@@ -2,10 +2,10 @@
 
 ## About
 
-**Skyrim Word Adventure Game** **
+**Skyrim Word Adventure Game**
 
 
-![screenshot]()  
+![screenshot](docs/Mockup.png)  
 [**Live site**]()
 
 # Table of contents
@@ -35,17 +35,51 @@
 
 ### Existing Features
 
-- **Riddles**
+- **Start**
 
-    - A simple inventory system that tracks what and how many items you have in your inventory.
+    - First screen of the game is presenting the game name with ASCII art and telling the player to press enter to contiune.
 
-        ![screenshot]()
+        ![screenshot](docs/start-screen.png)
+
+- **Enter name**
+
+    - After pressing enter on start-screen the player needs to enter a name
+
+        ![screenshot](docs/Skärmbild%202023-12-15%20143705.png)
+
+- **Name required**
+
+    - The name needs to only contain letters and a minimum of 3 letters in length
+
+        ![screenshot](docs/name_input_lenght.png)
+
+- **Welcome Message**
+
+    - When entering a valid name and pressing enter the player gets a welcome message and a description of the game. 
+        They are then prompted to press enter to contune
+
+        ![screenshot](docs/name_input_welcome.png)
 
 - **Scenarios**
 
-    - Individual zones/areas that have each their own description
+    - After the welcome message the game will start and call in scenarion one to the player. This looks the same throughout the game except for scenario three and six where the player might die or loose depending on what option the player picked
 
-        ![screenshot]()
+        ![screenshot](docs/scenario_option.png)
+
+- **Option picked**
+
+    - When picking an option the screen will display what option the player picked, the name of the option and the outcome of the option made.
+        The player is told to press enter to continue
+
+        ![screenshot](docs/option_picked.png)
+
+- **Scenario three death**
+
+    - In scenario three the player will die when picking option 2.
+        A message will be displayed telling the player they died and asking the player to press enter to restart the game
+
+        ![screenshot](docs/scenario_3_death.png)
+
 
 
 - **Input validation**

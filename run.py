@@ -5,7 +5,6 @@ import random
 import colorama
 from colorama import Fore, Back, Style
 from riddles import RIDDLES
-
 colorama.init(autoreset=True)
 
 """
@@ -15,6 +14,7 @@ the game when the user presses enter.
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
 
+""" Sets a border to call when needed for better visuals """
 def section_border():
     print("~" * 65)
 
@@ -65,19 +65,22 @@ def prompt():
 
 
 def restart_program():
-    """
-    Restarts the current program.
-    """
+    """ Restarts the current program """
     python = sys.executable
     os.execl(python, python, * sys.argv)
     restart_program()
 
 
-
+# Call the prompt function
 prompt()
 # Clear out welcome message:
 clear()
 
+"""
+Scenario one to six that contains the game itself. 
+It will print scenarios and different options for different scenarios.
+In 2 of the scenarios the player will either die or loose.
+"""
 
 def scenarioOne():
     section_border()
@@ -132,7 +135,8 @@ def scenarioTwo():
     print(Fore.YELLOW + "Scenario 2: The Enchanted Lute" + Fore.RESET)
     section_border()
     print("\nAfter that weird encounter with the peculiar alchemist\n"
-        "you turn around a corner and stumble upon a magical lute. What do you do?\n")
+        "you turn around a corner in the tavern and stumble upon a magical lute.\n"
+        "What do you do?\n")
     section_border()
     print(Fore.BLUE + "Option 1: Play the Chicken Serenade?\n"
         "Option 2: Fus Ro Jam?\n")
@@ -224,8 +228,6 @@ def scenarioThree():
             "and everyone's having a jolly good time.\n"
             "Or so you think until you're surprised attacked by the giant\n"
             "swinging his club making you fly like the dragon you are inside.\n")
-        section_border()
-        clear()
         section_border()
         print(Fore.RED + "\nToo bad Dovakhiin isn't invicible, you flew straight to oblivion!\n")
         input(Fore.RED + "Press enter to restart ...\n" + Fore.RESET)
@@ -344,11 +346,12 @@ scenarioFive()
  
 def scenarioSix():
     """
-    Simulates an encounter with Cicero, the eccentric jester, in a crypt. Cicero presents a riddle
+    Simulates an encounter with Cicero in the crypt. Cicero presents a riddle
     that the player must solve to proceed. The function randomly selects a riddle from the predefined
     set of riddles, displays it along with answer options, prompts the player for input, and validates
     the response. If the answer is correct, Cicero allows the player to pass; otherwise, the game restarts.
     """
+    """Get riddle from RIDDLES in random order"""
     riddle_index = random.randint(0, len(RIDDLES) - 1)
     selected_riddle = RIDDLES[riddle_index]
 
@@ -400,7 +403,7 @@ def scenarioSix():
              f"The correct answer was {selected_riddle['correct_answer']}.")
         section_border()
         print("\nCicero closes the entrance and you are forced\n"
-              "back down in to the tomb. You have lost the game....\n")
+              "back down in to the crypt. You have lost the game....\n")
         section_border()
         input(Fore.RED + "Press enter to restart ..." + Fore.RESET)
         clear()
