@@ -101,8 +101,7 @@
 | ![screenshot](docs/name_input_lenght.png) | You need to write a name with at least three letters and letters only. |
 | ![screenshot](docs/testing_requirement.png) | You cannot break anything by writing any special characters (!*"#%).|
 | ![screenshot](docs/option_input_number_required.png) | If you do not pick an option 1 or 2 it will tell you again to pick option 1 or 2. This will repeat with letters, special symbols etc too|
-| ![screenshot]() | If you write "Get" on a non existent item you will get a "Cannot get (item)" message.|
-| ![screenshot]() |  If you write something else that is not a command you will get an "Invalid command" message. |
+| ![screenshot](docs/invalid_input_riddle.png) | You can only pick a number between 1-4 when answering the riddles |
 
 ### Future Features
 
@@ -125,23 +124,12 @@ and mapped out before coding began using a free version of
 [Lucidchart](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning)
 
 Below I made a map for directions in the game and was used as a flowchart to know which areas and directions I needed to add.
+The last moment, scenario six was added during development.
 
-![screenshot]()
+![screenshot](docs/flowchart_pp3.jpeg)
 
 
-### Classes & Functions
-
-The program uses classes as a blueprint for the project's objects (OOP). This allows for the object to be reusable.
-
-```python
-class Person:
-    """ Insert docstring comments here """
-    def __init__(self, name, age, health, inventory):
-        self.name = name
-        self.age = age
-        self.health = health
-        self.inventory = inventory
-```
+### Functions
 
 The primary functions used on this application are:
 
@@ -149,6 +137,8 @@ The primary functions used on this application are:
     - Clears console.
 - `prompt()`
     - Display starting message
+- `section_border()`
+    - Function to call border for better visuals
 - `restart_program()`
     - Restarts the application.
 - `scenarioOne()`
@@ -168,9 +158,11 @@ The primary functions used on this application are:
 
 I've used the following Python packages and/or external imported packages.
 
-- `sys`: used for adding the restart game function.
+- `sys`: used for adding the restart program function.
 - `os`: used for adding a `clear()` function.
 - `colorama`: used for including color in the terminal.
+- `pyfiglet`: used for including ASCII art in the terminal.
+- `random`: is used for generating or manipulating random integers.
 
 ## Testing
 
@@ -181,7 +173,7 @@ For all testing, please refer to the [TESTING.md](TESTING.md) file.
 Code Institute has provided a [template](https://github.com/Code-Institute-Org/python-essentials-template) to display the terminal view of this backend application in a modern web browser.
 This is to improve the accessibility of the project to others.
 
-The live deployed application can be found deployed on [Heroku](https://gointothedungeon.herokuapp.com).
+The live deployed application can be found deployed on [Heroku]().
 
 ### Heroku Deployment
 
