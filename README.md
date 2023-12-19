@@ -47,12 +47,6 @@
 
         ![screenshot](docs/Skärmbild%202023-12-15%20143705.png)
 
-- **Name required**
-
-    - The name needs to only contain letters and a minimum of 3 letters in length
-
-        ![screenshot](docs/name_input_lenght.png)
-
 - **Welcome Message**
 
     - When entering a valid name and pressing enter the player gets a welcome message and a description of the game. 
@@ -85,30 +79,28 @@
     - At the last option the player meets a jester called Cicero. 
         He will ask the player to solve a riddle to pass him.
 
-        ![screenshot](docs/option_picked.png)
+        ![screenshot](docs/ScenarioSix_Riddle.png)
 
 - **Riddle Correct Answer**
 
-    - If the correct answer is picked Cicero will tell the player that they passed and you win the game.
+    - If the correct answer is picked Cicero will tell the player that they passed and you win the game. The player is then prompted to press Enter to restart 
 
         ![screenshot](docs/option_picked.png)
 
 - **Riddle Wrong Answer**
 
-    - When picking an option the screen will display what option the player picked, the name of the option and the outcome of the option made.
-        The player is told to press enter to continue
+    - When wrong answer is picked Cicero will laugh, let the player know the correct answer and not let the player pass. The game tells the player they lost and the player is prompted to press Enter to restart
 
-        ![screenshot](docs/option_picked.png)
+        ![screenshot](docs/riddle_lost.png)
 
 
 - **Input validation**
 
 | Screenshot | Notes |
 | --- | --- |
-| ![screenshot]() |  You cannot enter anything other than directions (North, West, East or South) or Get (item). |
-| ![screenshot]() | You cannot break anything by writing any special characters (!*"#%).|
-| ![screenshot]() | If you write "Go" somewhere that is not the directions you will get a "You cannot go that way" message.|
-| ![screenshot]() | You cannot break anything by writing the wrong words.|
+| ![screenshot](docs/name_input_lenght.png) | You need to write a name with at least three letters and letters only. |
+| ![screenshot](docs/testing_requirement.png) | You cannot break anything by writing any special characters (!*"#%).|
+| ![screenshot](docs/option_input_number_required.png) | If you do not pick an option 1 or 2 it will tell you again to pick option 1 or 2. This will repeat with letters, special symbols etc too|
 | ![screenshot]() | If you write "Get" on a non existent item you will get a "Cannot get (item)" message.|
 | ![screenshot]() |  If you write something else that is not a command you will get an "Invalid command" message. |
 
