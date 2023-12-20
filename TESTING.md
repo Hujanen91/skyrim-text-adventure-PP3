@@ -18,10 +18,10 @@ Errors where found but it was simple errors like:<br>
 Small errors with simple fixes.
 After fixing the errors the code validates without errors
 
-| File | CI URL | Screenshot | Notes |
-| --- | --- | --- | --- |
-| run.py | [CI PEP8]() | ![screenshot]() | All clear, no errors found. |
-| rooms.py | [CI PEP8]() | ![screenshot]() | All clear, no errors found. |
+| File | Screenshot | Notes |
+| --- | --- | --- |
+| run.py | ![screenshot](docs/validation_clear.png) | All clear, no errors found. |
+| riddles.py | ![screenshot](docs/validation_clear_riddles.png) | All clear, no errors found. |
 
 
 ## Lighthouse Audit
