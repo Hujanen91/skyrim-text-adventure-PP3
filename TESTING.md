@@ -54,7 +54,7 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 | Screenshot | Notes |
 | --- | --- |
-| ![screenshot](docs/bug__linetoolong.png) |  Three lines of code for option-picking the riddles was given the "line too long" warning in the validator. I tried everything to break the lines in two and make it work, I googled solutions and tried several things and everything came back giving errors in the validator. The only thing that actually worked without errors in either the validator or the terminal was a backwardsslash but instead this created a big gap between the line telling the user to pick an answer and the "(1-4)". I decided to keep it like this to have a clear validation. |
+| ![screenshot](docs/bug__linetoolong.png) |  Three lines of code in option-picking the riddles was given the "line too long" warning in the validator. I tried everything to break the lines in two and make it work, I googled solutions and tried several things and everything came back giving errors in either the terminal or in the validator. The only thing that actually worked without errors in either the validator or the terminal was a backward slash but instead this created a big gap between the line telling the user to pick an answer and the "(1-4)". I decided to keep it like this to have a clear validation. |
 | ![screenshot](docs/keyboardinterrupted.png) |  KeyboardInterrupt with CTRL + C |
 
 ---

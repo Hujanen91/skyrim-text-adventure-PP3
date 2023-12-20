@@ -6,7 +6,7 @@
 
 
 ![screenshot](docs/Mockup.png)  
-[**Live site**]()
+[**Live site**](https://skyrim-word-adventure-pp3-d0812baa463d.herokuapp.com/)
 
 # Table of contents
 - [Features](#features)
@@ -37,7 +37,7 @@
 
 - **Start**
 
-    - First screen of the game is presenting the game name with ASCII art and telling the player to press enter to contiune.
+    - First screen of the game is presenting the game name with ASCII art and telling the player to press enter to continue.
 
         ![screenshot](docs/start-screen.png)
 
@@ -50,13 +50,13 @@
 - **Welcome Message**
 
     - When entering a valid name and pressing enter the player gets a welcome message and a description of the game. 
-        They are then prompted to press enter to contune
+        They are then prompted to press enter to continue
 
         ![screenshot](docs/name_input_welcome.png)
 
 - **Scenarios**
 
-    - After the welcome message the game will start and call in scenarion one to the player. This looks the same throughout the game except for scenario three and six where the player might die or loose depending on what option the player picked
+    - After the welcome message the game will start and call in scenario one to the player. This looks the same throughout the game except for scenario three and six where the player might die or loose depending on what option the player picked
 
         ![screenshot](docs/scenario_option.png)
 
@@ -85,7 +85,7 @@
 
     - If the correct answer is picked Cicero will tell the player that they passed and you win the game. The player is then prompted to press Enter to restart 
 
-        ![screenshot](docs/option_picked.png)
+        ![screenshot](docs/riddle_correct.png)
 
 - **Riddle Wrong Answer**
 
@@ -178,7 +178,7 @@ For all testing, please refer to the [TESTING.md](TESTING.md) file.
 Code Institute has provided a [template](https://github.com/Code-Institute-Org/python-essentials-template) to display the terminal view of this backend application in a modern web browser.
 This is to improve the accessibility of the project to others.
 
-The live deployed application can be found deployed on [Heroku]().
+The live deployed application can be found deployed on [Heroku](https://skyrim-word-adventure-pp3-d0812baa463d.herokuapp.com/).
 
 ### Heroku Deployment
 
@@ -276,7 +276,9 @@ As of writing this there will be no difference between the local and the deploye
 
 ### Media
 
-For this project no external media was used for creation of this project.
+For this project no external media was used for creation of this project.<br>
+
+The content in the projects is all based on or inspired by the game The Elder Scrolls V: Skyrim by Bethesda Game Studios.
 
 
 
