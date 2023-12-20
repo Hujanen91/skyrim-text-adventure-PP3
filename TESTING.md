@@ -31,8 +31,8 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 | Page | Size | Screenshot | Notes |
 | --- | --- | --- | --- |
-| Home | Desktop | ![screenshot]() | Few warnings |
-| Home | Mobile | ![screenshot]() | Few warnings |
+| Home | Desktop | ![screenshot](docs/lighthouse_desktop.png) | Few warnings |
+| Home | Mobile | ![screenshot](docs/lighthouse_mobile.png) | No warnings |
 
 ## Defensive Programming
 
@@ -40,12 +40,9 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 | Screenshot | Notes |
 | --- | --- |
-| ![screenshot]() |  You cannot enter anything other than directions (North, West, East or South) or Get (item). |
-| ![screenshot]() | You cannot break anything by writing any special characters (!*"#%).|
-| ![screenshot]() | If you write "Go" somewhere that is not the directions you will get a "You cannot go that way" message.|
-| ![screenshot]() | You cannot break anything by writing the wrong words.|
-| ![screenshot]() | If you write "Get" on a non existent item you will get a "Cannot get (item)" message.|
-| ![screenshot]() |  If you write something else that is not a command you will get an "Invalid command" message. |
+| ![screenshot](docs/name_input_lenght.png) | You cannot enter anything other than letters for your name, it needs to be more than 3 letters and you cannot break anything by writing any specail characters |
+| ![screenshot](docs/option_input_number_required.png) | You cant't write 3 or higher numbers on options. You can't write letters or special characters either and they wont break anything |
+| ![screenshot](docs/invalid_input_riddle.png) |  You can't write letters or numbers higher than 4 when answering the riddles |
 
 - The application has been tested numerous times to ensure that the user cannot break it by inputting the wrong commands.
 
@@ -57,6 +54,7 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 | Screenshot | Notes |
 | --- | --- |
-| ![screenshot]() |  KeyboardInterrupt with CTRL + C |
+| ![screenshot](docs/bug__linetoolong.png) |  Three lines of code for option-picking the riddles was given the "line too long" warning in the validator. I tried everything to break the lines in two and make it work, I googled solutions and tried several things and everything came back giving errors in the validator. The only thing that actually worked without errors in either the validator or the terminal was a backwardsslash but instead this created a big gap between the line telling the user to pick an answer and the "(1-4)". I decided to keep it like this to have a clear validation. |
+| ![screenshot](docs/keyboardinterrupted.png) |  KeyboardInterrupt with CTRL + C |
 
 ---
