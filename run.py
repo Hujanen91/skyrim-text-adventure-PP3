@@ -439,8 +439,8 @@ def scenarioSix():
         clear()
         section_border()
         print(Fore.YELLOW + "\nCicero applauds your wit! You answered:\n"
-        f"{selected_riddle['correct_answer']}\n"
-        "wich is correct and you may pass.\n")
+                           f"{selected_riddle['correct_answer']}\n"
+                           "wich is correct and you may pass.\n")
         section_border()
         print(
               "\nCongratulations! You, the dragonborn of Skyrim, managed\n"

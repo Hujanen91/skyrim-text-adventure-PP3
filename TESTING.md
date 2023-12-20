@@ -40,8 +40,8 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 | Screenshot | Notes |
 | --- | --- |
-| ![screenshot](docs/name_input_lenght.png) | You cannot enter anything other than letters for your name, it needs to be more than 3 letters and you cannot break anything by writing any specail characters |
-| ![screenshot](docs/option_input_number_required.png) | You cant't write 3 or higher numbers on options. You can't write letters or special characters either and they wont break anything |
+| ![screenshot](docs/name_input_lenght.png) | You cannot enter anything other than letters for your name, it needs to be more than 3 letters and you cannot break anything by writing any special characters |
+| ![screenshot](docs/option_input_number_required.png) | You can't write 3 or higher numbers on options. You can't write letters or special characters either and they wont break anything |
 | ![screenshot](docs/invalid_input_riddle.png) |  You can't write letters or numbers higher than 4 when answering the riddles |
 
 - The application has been tested numerous times to ensure that the user cannot break it by inputting the wrong commands.
