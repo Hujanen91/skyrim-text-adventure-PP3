@@ -5,7 +5,18 @@ Return back to the [README.md](README.md) file.
 ## Code Validation
 ### Python
 
-I have used the recommended [CI Python Linter](https://pep8ci.herokuapp.com) to validate all of my Python files.
+I have used the recommended [CI Python Linter](https://pep8ci.herokuapp.com) to validate all of my Python files.<br>
+Errors where found but it was simple errors like:<br>
+- E501 line too long (82 > 79 characters)
+- E128 continuation line under-indented for visual indent
+- E305 expected 2 blank lines after class or function definition, found 0
+- E275 missing whitespace after keyword
+- W293 blank line contains whitespace
+- W291 trailing whitespace
+- W292 no newline at end of file
+
+Small errors with simple fixes.
+After fixing the errors the code validates without errors
 
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- |

@@ -105,6 +105,11 @@
 
 ### Future Features
 
+- Add more riddles
+- Add more scenarios and locations
+- Add inventory and events further on that will end differently depending on what is in the inventory
+- Add more enemies
+- Add more depth to each location with different scenarios and make the controls so you pick the location to go to: "Go left to city hall or right to the local store"
 
 ---
 ## Tools & Technologies Used
@@ -123,8 +128,8 @@ To follow best practice, a flowchart was created for the app's logic,
 and mapped out before coding began using a free version of
 [Lucidchart](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning)
 
-Below I made a map for directions in the game and was used as a flowchart to know which areas and directions I needed to add.
-The last moment, scenario six was added during development.
+Below I made a flowchart for the scenarios and directions in the game and this was used as a guideline to know which areas and directions I needed to add.
+Scenario four was later changed to The Whimsical Werewolf and scenario five was moved to become scenario six during development. Scenario five was given a new scenario.
 
 ![screenshot](docs/flowchart_pp3.jpeg)
 
