@@ -38,13 +38,11 @@ def prompt():
     section_border()
     print("Hello Adventurer, please enter your name below:")
     section_border()
-
-
     while True:
-    """  
-    Ask the player for a name. The name is required and needs to
-    be only letters and at least 3 letters long.
-    """
+        """
+        Ask the player for a name. The name is required and needs to
+        be only letters and at least 3 letters long.
+        """
         try:
             name = input("")
 
@@ -286,7 +284,7 @@ scenarioThree()
 
 
 def scenarioFour():
-    """  
+    """
     Scenario one to six that contains the game itself.
     It will print scenarios and different options for different scenarios.
     In 2 of the scenarios the player will either die or loose.
@@ -348,7 +346,7 @@ scenarioFour()
 
 
 def scenarioFive():
-    """  
+    """
     Scenario one to six that contains the game itself.
     It will print scenarios and different options for different scenarios.
     In 2 of the scenarios the player will either die or loose.
@@ -445,15 +443,11 @@ def scenarioSix():
     for i, option in enumerate(selected_riddle["options"], start=1):
         print(f"Option {i}: {option}")
 
-    user_input = input(f"Enter the number of your answer\
-                       (1-{len(selected_riddle['options'])}): ")
-
+    user_input = input(f"Enter (1-{len(selected_riddle['options'])}): ")
     while not user_input.isdigit() or int(user_input)\
             not in range(1, len(selected_riddle['options']) + 1):
-        print(f"Please enter a valid option\
-              (1-{len(selected_riddle['options'])}): ")
-        user_input = input(f"Enter the number of your answer\
-                           (1-{len(selected_riddle['options'])}): ")
+        print(f"Please try again(1-{len(selected_riddle['options'])}): ")
+        user_input = input(f"Enter (1-{len(selected_riddle['options'])}): ")
 
     selected_option = selected_riddle["options"][int(user_input) - 1]
 
@@ -461,8 +455,8 @@ def scenarioSix():
         clear()
         section_border()
         print(Fore.YELLOW + "\nCicero applauds your wit! You answered:\n"
-                           f"{selected_riddle['correct_answer']}\n"
-                           "wich is correct and you may pass.\n")
+              f"{selected_riddle['correct_answer']}\n"
+              "wich is correct and you may pass.\n")
         section_border()
         print(
               "\nCongratulations! You, the dragonborn of Skyrim, managed\n"
