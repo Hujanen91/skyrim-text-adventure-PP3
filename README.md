@@ -158,6 +158,8 @@ The primary functions used on this application are:
     - Displays scenario five.
 - `scenarioSix()`
     - Displays scenario six.
+- `RIDDLES`
+    - Contains the riddles, options and answers.
 
 ### Imports
 

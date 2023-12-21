@@ -39,11 +39,12 @@ def prompt():
     print("Hello Adventurer, please enter your name below:")
     section_border()
 
-    """
+
+    while True:
+    """  
     Ask the player for a name. The name is required and needs to
     be only letters and at least 3 letters long.
     """
-    while True:
         try:
             name = input("")
 
@@ -149,6 +150,11 @@ scenarioOne()
 
 
 def scenarioTwo():
+    """
+    Scenario one to six that contains the game itself.
+    It will print the scenarios and different options for different scenarios.
+    In 2 of the scenarios the player will either die or loose.
+    """
     section_border()
     print(Fore.YELLOW + "Scenario 2: The Enchanted Lute" + Fore.RESET)
     section_border()
@@ -211,6 +217,12 @@ scenarioTwo()
 
 
 def scenarioThree():
+    """
+    Scenario one to six that contains the game itself.
+    It will print scenarios and different options for different scenarios.
+    In this scenario the player will die if picking option 2 and
+    the player will then be asked to press enter to restart the game
+    """
     section_border()
     print(Fore.YELLOW + "Scenario 3: The Jolly Mammoth Ride" + Fore.RESET)
     section_border()
@@ -274,6 +286,11 @@ scenarioThree()
 
 
 def scenarioFour():
+    """  
+    Scenario one to six that contains the game itself.
+    It will print scenarios and different options for different scenarios.
+    In 2 of the scenarios the player will either die or loose.
+    """
     section_border()
     print(Fore.YELLOW + "Scenario 4: The Whimsical Werewolf")
     section_border()
@@ -331,6 +348,11 @@ scenarioFour()
 
 
 def scenarioFive():
+    """  
+    Scenario one to six that contains the game itself.
+    It will print scenarios and different options for different scenarios.
+    In 2 of the scenarios the player will either die or loose.
+    """
     section_border()
     print(Fore.YELLOW + "Scenario 5: The Ancient Tomb of Laughter"
           + Fore.RESET)
