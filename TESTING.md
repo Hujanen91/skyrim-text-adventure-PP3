@@ -23,17 +23,6 @@ After fixing the errors the code validates without errors
 | run.py | ![screenshot](docs/validation_clear.png) | All clear, no errors found. |
 | riddles.py | ![screenshot](docs/validation_clear_riddles.png) | All clear, no errors found. |
 
-
-## Lighthouse Audit
-
-
-I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
-
-| Page | Size | Screenshot | Notes |
-| --- | --- | --- | --- |
-| Home | Desktop | ![screenshot](docs/lighthouse_desktop.png) | Few warnings |
-| Home | Mobile | ![screenshot](docs/lighthouse_mobile.png) | No warnings |
-
 ## Defensive Programming
 
 - Users must enter a valid letter/word/string when prompted otherwise one of the things underneath will happen.
@@ -48,13 +37,10 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 
 
-
-
 ## Bugs
 
 | Screenshot | Notes |
 | --- | --- |
-| ![screenshot](docs/bug__linetoolong.png) |  Three lines of code in option-picking the riddles was given the "line too long" warning in the validator. I tried everything to break the lines in two and make it work, I googled solutions and tried several things and everything came back giving errors in either the terminal or in the validator. The only thing that actually worked without errors in either the validator or the terminal was a backward slash but instead this created a big gap between the line telling the user to pick an answer and the "(1-4)". I decided to keep it like this to have a clear validation. |
-| ![screenshot](docs/keyboardinterrupted.png) |  KeyboardInterrupt with CTRL + C |
+| ![screenshot](docs/bug__linetoolong.png) |  Three lines of code in option-picking the riddles was given the "line too long" warning in the validator. I tried everything to break the lines in two and make it work and everything came back giving errors in either the terminal or in the validator. The only thing that actually worked without errors was a backward slash but instead this created a big gap between the line telling the user to pick an answer and the "(1-4)". I decided to edit the printed text to make it short enough to be on the same line to make it work and look the best it could without awkward gaps. |
 
 ---
