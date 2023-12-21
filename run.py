@@ -446,7 +446,7 @@ def scenarioSix():
     user_input = input(f"Enter (1-{len(selected_riddle['options'])}): ")
     while not user_input.isdigit() or int(user_input)\
             not in range(1, len(selected_riddle['options']) + 1):
-        print(f"Please try again(1-{len(selected_riddle['options'])}): ")
+        print("Please enter a valid option (1-4):")
         user_input = input(f"Enter (1-{len(selected_riddle['options'])}): ")
 
     selected_option = selected_riddle["options"][int(user_input) - 1]
